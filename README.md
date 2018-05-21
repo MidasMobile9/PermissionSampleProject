@@ -30,7 +30,7 @@ Manifest.permission.CAMERA
 </code></pre>
 
  
-5. 권한 요구 대화상자가 보여지기를 원하는 곳에 다음과 같이 선언
+5. 권한 요구 대화상자가 보여지기를 원하는 다음의 함수를 Call
 <pre><code>mPermission.checkPermissions();
 </code></pre>
 
