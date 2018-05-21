@@ -15,7 +15,7 @@
 </code></pre>
  
  
-3. Permission 클래스의 멤버 변수인 String[] permissions에 다음과 같이 원하는 권한을 똑같이 추가
+3. 다음과 같이 원하는 권한을 String배열에 똑같이 추가하여 초기화
 <pre><code>private String[] permissions = {
 Manifest.permission.READ_EXTERNAL_STORAGE,
 Manifest.permission.WRITE_EXTERNAL_STORAGE,
@@ -25,8 +25,8 @@ Manifest.permission.CAMERA
 
  
  
-4. 프로젝트의 MainActivity에 다음과 같이 인스턴스 생성
-<pre><code>mPermission = new Permission(getApplicationContext(), this);
+4. 3번에서 만든 배열을 생성자의 인자를 넣으면서 다음과 같이 인스턴스 생성
+<pre><code>mPermission = new Permission(this, permissions);
 </code></pre>
 
  
@@ -35,8 +35,8 @@ Manifest.permission.CAMERA
 </code></pre>
 
  
-6. Snackbar가 보여지길 원한다면 다음의 함수를 5번과 함께 선언
-<pre><code>setSnackbar();
+6. Snackbar가 보여지길 원한다면 다음의 함수를 5번과 함께 선언, view는 snackbar가 생성되는 view
+<pre><code>setSnackbar(View);
 </code></pre>
 
  
