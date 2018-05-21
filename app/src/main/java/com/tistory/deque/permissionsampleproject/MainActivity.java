@@ -48,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
 
   @OnClick(R.id.permissionBtn)
   public void onClickPermssionBtn(){
-    mPermission.checkPermissions();
     mPermission.setSnackbar(mainLayout);
     //인자는 스낵바가 보여질 View
+    mPermission.checkPermissions();
   }
 }
